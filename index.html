@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style -->
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <section class="sectionData">
+        <form class="formData" name="form" method="get">
+
+            <label for="">Insira seu nome:</label>
+            <input name="name" type="text" required>
+            <br><br>
+            <label for="">Meta Semana 1:</label>
+            <input name="semana1" type="number" required>
+            <br><br>
+            <label for="">Meta Semana 2:</label>
+            <input name="semana2" type="number" required>
+            <br><br>
+            <label for="">Meta Semana 3:</label>
+            <input name="semana3" type="number" required>
+            <br><br>
+            <label for="">Meta Semana 3:</label>
+            <input name="semana4" type="number" required>
+            <br><br><br>
+
+            <label for="">Meta Mensal:</label>
+            <input name="metaMensal" type="number" required>
+            
+            <br><br><br>
+            <button name="btnCalc" class="btnCalc">Calcular</button>
+            
+        </form>
+    </section>
+    
+    <section>
+        <?php
+
+            // Variavel Salario definida
+            $salarioMinimo = 1927.02;
+
+            if (isset($_GET['btnCalc'])) {
+                
+                
+                $mateSemanal = arary (
+                    $_GET['semana1'],
+                    $_GET['semana2'],
+                    $_GET['semana3'],
+                    $_GET['semana4'],
+                );
+                $metaMensal = $_GET['metaMensal'];
+                
+                // Calculo salário final
+                $salarioFinal = $salarioMinimo;
+                $bonusSemanal = 0;
+                $bonusExcedenteSemanal = 0;
+                $bonusExcedenteMensal = 0;
+                
+                // Loop para calcular bônus semanais
+                foreach ($metaSemanal as $meta) {
+                    
+                    
+                }
+                
+                
+            }
+
+        ?>
+    </section>
+    
+</body>
+</html>

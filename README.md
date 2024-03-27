@@ -73,6 +73,9 @@ Apresenta o nome do vendedor, o valor do salário mínimo, os detalhes dos bônu
 <br>
 
 * Meta da Semana 4 atingida: R$ 24.000
+<br>
+
+* Meta Mensal atingida: 80.000
 </p>
 
 <br>

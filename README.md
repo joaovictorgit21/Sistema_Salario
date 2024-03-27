@@ -120,6 +120,8 @@ Apresenta o nome do vendedor, o valor do salário mínimo, os detalhes dos bônu
 
 ### * 👨‍💻 Programador
 
+![Linkedin](https://br.linkedin.com/joaovictorfarias)
+
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/111014716?s=400&u=5d8ff835762bc44c2651472ac96f0f9fc1f953a6&v=4" width=95><br><sub>João Victor Farias</sub>](https://github.com/joaovictorgit21)
 | :--: |
 

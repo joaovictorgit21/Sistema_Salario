@@ -59,6 +59,7 @@ Apresenta o nome do vendedor, o valor do salário mínimo, os detalhes dos bônu
 [PHP Guia](https://www.php.net/manual/pt_BR/function.isset.php)
 <br>
 [Github](https://github.com)
+[BlackBox](https://www.blackbox.ai/)
 
 ## Autores
 

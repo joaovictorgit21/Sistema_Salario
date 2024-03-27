@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,75 +7,188 @@
     <title>Document</title>
 
     <!-- Style -->
-
     <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+        }
+
+        .formData{
+            margin-top: 30px;
+            margin-left: 40px;
+            width: 100%;
+            height: 30rem;
+            border: 1px solid black;
+            text-align: center;
+            box-shadow: 10px 5px black;
+            border-radius: 20px;
+        }
+
+        label {
+            font-size: 22px;
+        }
+
+        input {
+            width: 300px;
+            height: 35px;
+            background-color: #afb0b3;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        button {
+            width: 350px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .sectionData {
+            width: 40rem;
+        }
+        
+        .codeSection {
+            width: 40%;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            top: -30rem;
+            left: 50rem;
+        }
+
+
 
     </style>
 
 </head>
 <body>
 
+        <h1><center>Calculo de Salario</center></h1>
+
     <section class="sectionData">
         <form class="formData" name="form" method="get">
-
             <label for="">Insira seu nome:</label>
+            <br>
             <input name="name" type="text" required>
-            <br><br>
-            <label for="">Meta Semana 1:</label>
+            <br>
+            <label for="">Meta Semana 1: (atingida)</label>
+            <br>
             <input name="semana1" type="number" required>
-            <br><br>
-            <label for="">Meta Semana 2:</label>
+            <br>
+            <label for="">Meta Semana 2: (atingida)</label>
+            <br>
             <input name="semana2" type="number" required>
-            <br><br>
-            <label for="">Meta Semana 3:</label>
+            <br>
+            <label for="">Meta Semana 3: (atingida)</label>
+            <br>
             <input name="semana3" type="number" required>
-            <br><br>
-            <label for="">Meta Semana 3:</label>
+            <br>
+            <label for="">Meta Semana 4: (atingida)</label>
+            <br>
             <input name="semana4" type="number" required>
-            <br><br><br>
+            <br>
 
-            <label for="">Meta Mensal:</label>
+            <label for="">Meta Mensal Total:</label>
+            <br>
             <input name="metaMensal" type="number" required>
             
-            <br><br><br>
+            <br><br>
             <button name="btnCalc" class="btnCalc">Calcular</button>
             
         </form>
     </section>
     
-    <section>
+    <section class="codeSection">
+
         <?php
 
-            // Variavel Salario definida
-            $salarioMinimo = 1927.02;
-
+            // Verifique se o formulário foi enviado usando $_SERVER['REQUEST_METHOD'] === 'GET'
             if (isset($_GET['btnCalc'])) {
-                
-                
-                $mateSemanal = arary (
-                    $_GET['semana1'],
-                    $_GET['semana2'],
-                    $_GET['semana3'],
-                    $_GET['semana4'],
-                );
+
+                $name = $_GET['name'];
+
+                // Variaveis Semanais declaradas
+                $MetasSemana1 = $_GET['semana1'];
+                $MetasSemana2 = $_GET['semana2'];
+                $MetasSemana3 = $_GET['semana3'];
+                $MetasSemana4 = $_GET['semana4'];
+
+                // Variaveis metas e salarios declarados
                 $metaMensal = $_GET['metaMensal'];
-                
-                // Calculo salário final
-                $salarioFinal = $salarioMinimo;
+                $metaSemanal = 20000;
+                $salarioMinimo = 1927.02;
+                $salarioFinal;
                 $bonusSemanal = 0;
-                $bonusExcedenteSemanal = 0;
-                $bonusExcedenteMensal = 0;
-                
-                // Loop para calcular bônus semanais
-                foreach ($metaSemanal as $meta) {
-                    
-                    
+                $exedenteSemanal = 0;
+                $exedenteMensal = 0;
+
+
+                if ($MetasSemana1 >= $metaSemanal ) {
+                    $bonusSemanal += $MetasSemana1 * 0.1;
                 }
                 
+                if ($MetasSemana2 >= $metaSemanal ) {
+                    $bonusSemanal += $MetasSemana2 * 0.1;
+                }
                 
-            }
+                if ($MetasSemana3 >= $metaSemanal ) {
+                    $bonusSemanal += $MetasSemana3 * 0.1;
+                }
+                
+                if ($MetasSemana4 >= $metaSemanal ) {
+                    $bonusSemanal += $MetasSemana4 * 0.1;
+                }
+                
 
+                if ($MetasSemana1 >= $metaSemanal) {
+
+                    $excedenteSemanal = $metaSemanal1 - 20000;
+                    $bonificacaoSemanal3 = $excedenteSemanal3 * 0.5;
+
+                }
+                if ($MetasSemana2 >= $metaSemanal) {
+
+                    $excedenteSemanal = $metaSemanal2 - 20000;
+                    $bonificacaoSemanal3 = $excedenteSemanal3 * 0.5;
+
+                }
+                if ($MetasSemana3 >= $metaSemanal) {
+
+                    $excedenteSemanal = $metaSemanal3 - 20000;
+                    $bonificacaoSemanal3 = $excedenteSemanal3 * 0.5;
+
+                }
+                if ($MetasSemana4 >= $metaSemanal) {
+
+                    $excedenteSemanal = $metaSemanal4 - 20000;
+                    $bonificacaoSemanal3 = $excedenteSemanal3 * 0.5;
+
+                }
+
+                $metaSemanalTotal = $MetasSemana1 + $MetasSemana2 + $MetasSemana3 + $MetasSemana4;
+                $metaMensalTotal = $metaMensal;
+
+                if ($metaMensal > 80000) {
+                    $exedenteMensal = $metaMensal - 80000;
+                    $bonusMensal = $exedenteMensal * 0.10;
+                }
+
+                 
+                $salarioFinal = $salarioMinimo +  $metaMensal + $bonusSemanal + $bonusMensal;
+
+                echo "<h2>Resultado para $name:</h2>";
+                echo "<p>Salário Base: R$ $salarioMinimo</p>";
+                echo "<p>Bônus por Meta Semanal: R$ " . number_format($bonusSemanal, 2) . "</p>";
+                echo "<p>Bônus por Meta Mensal: R$ " . number_format($bonusMensal, 2) . "</p>";
+                echo "<p>Excedente da Meta Semanal: R$ " . number_format($excedenteMensal, 2) . "</p>";
+                echo "<h3>Salário Final: R$ " . number_format($salarioFinal, 2) . "</h3>";
+            }
         ?>
+
     </section>
     
 </body>
